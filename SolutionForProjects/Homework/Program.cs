@@ -4,6 +4,20 @@
     internal class Program
     {
 
+        static void Main()
+        {
+            var helper = new TextHelper("My text");
+
+            var result1 = helper.CountWordsMoreThanFourLetters();
+            Console.WriteLine($"Words with more than 4 letters: {result1}");
+
+            var result2 = helper.IsPalindrome();
+            Console.WriteLine($"Is palindrome: {result2}");
+
+            var result3 = helper.CountVowels();
+            Console.WriteLine($"Number of vowels: {result3}");
+        }
+
         //public static bool IsPalindrome(string input)
         //{
         //    if (string.IsNullOrEmpty(input))
@@ -36,36 +50,36 @@
 
         //    }
 
-        public static int CountWordsWithMoreThanFourLetters(string input)
-        {
-            if (string.IsNullOrWhiteSpace(input))
-            {
-                return 0;    //Return 0 if the input is null, empty, or whitespace
-            }
-            //Split the string into words
-            string[] words = input.Split(new[] { ' ', '\t', '\n', '\r', ',', '.', ',', '!', '?' }, StringSplitOptions.RemoveEmptyEntries);
+        //public static int CountWordsWithMoreThanFourLetters(string input)
+        //{
+        //    if (string.IsNullOrWhiteSpace(input))
+        //    {
+        //        return 0;    //Return 0 if the input is null, empty, or whitespace
+        //    }
+        //    //Split the string into words
+        //    string[] words = input.Split(new[] { ' ', '\t', '\n', '\r', ',', '.', ',', '!', '?' }, StringSplitOptions.RemoveEmptyEntries);
 
-            //Count the words with more than 4 letters
-            int count = 0;
-            foreach (string word in words)
-            {
-                if (word.Length > 4)
-                {
-                    count++;
-                }
-            }
-            return count;
-        }
+        //    //Count the words with more than 4 letters
+        //    int count = 0;
+        //    foreach (string word in words)
+        //    {
+        //        if (word.Length > 4)
+        //        {
+        //            count++;
+        //        }
+        //    }
+        //    return count;
+        //}
 
-        static void Main(string[] args)
-        {
-            string testInput = "Hello, world! How are you?";
-            int result = CountWordsWithMoreThanFourLetters(testInput);
-            Console.WriteLine($"Number of words with more than 4 letters: {result}");
+        //static void Main(string[] args)
+        //{
+        //    string testInput = "Hello, world! How are you?";
+        //    int result = CountWordsWithMoreThanFourLetters(testInput);
+        //    Console.WriteLine($"Number of words with more than 4 letters: {result}");
 
 
 
-        }
+        //}
     }
 
 }
