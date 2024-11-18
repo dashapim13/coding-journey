@@ -1,4 +1,5 @@
-﻿namespace FirstProject
+﻿namespace Homework
+
 {
     internal class Program
     {
